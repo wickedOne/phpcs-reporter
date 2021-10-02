@@ -26,3 +26,6 @@ specify this report in your ``phpcs.xml.dist``:
     ...
 
 ```
+
+> **NOTE**: if one file has multiple violations, the editor link will direct you to the file itself rather than the correct line.
+> use ctrl + l to jump to the correct line in these situations.
