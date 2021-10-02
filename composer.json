@@ -1,0 +1,28 @@
+{
+    "name": "wickedone/phpcs-reporter",
+    "description": "PHP Codesniffer output with phpstorm editor url",
+    "type": "library",
+    "keywords": [
+        "phpcs",
+        "phpstorm",
+        "testing"
+    ],
+    "require": {
+        "php": ">=7.3",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wickedOne",
+            "email": "wicliff.wolda@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "WickedOne\\PHPCSReport\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
