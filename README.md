@@ -2,6 +2,11 @@
 
 prints additional PhpStorm editor url in PHPCS cli output.
 
+[![Latest Stable Version](http://poser.pugx.org/wickedone/phpcs-reporter/v)](https://packagist.org/packages/wickedone/phpcs-reporter) 
+[![Total Downloads](http://poser.pugx.org/wickedone/phpcs-reporter/downloads)](https://packagist.org/packages/wickedone/phpcs-reporter) 
+[![License](http://poser.pugx.org/wickedone/phpcs-reporter/license)](https://packagist.org/packages/wickedone/phpcs-reporter) 
+[![PHP Version Require](http://poser.pugx.org/wickedone/phpcs-reporter/require/php)](https://packagist.org/packages/wickedone/phpcs-reporter)
+
 ## installation
 ```bash
 $ composer require --dev wickedone/phpcs-reporter

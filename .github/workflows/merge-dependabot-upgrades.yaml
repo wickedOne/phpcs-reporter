@@ -1,0 +1,17 @@
+name: merge dependabot upgrades
+
+on: pull_request
+
+jobs:
+  merge-me:
+    name: merge dependabot upgrades
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: merge
+        uses: ridedott/merge-me-action@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: MERGE
