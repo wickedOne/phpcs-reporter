@@ -1,0 +1,42 @@
+name: "continuous integration"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  coding-standards:
+    name: "php cs fixer"
+
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+        dependencies:
+          - "locked"
+        php-version:
+          - "8.1"
+        operating-system:
+          - "ubuntu-latest"
+
+    steps:
+      - name: "checkout"
+        uses: "actions/checkout@v3"
+
+      - name: "install PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          coverage: "none"
+          php-version: "${{ matrix.php-version }}"
+          ini-values: memory_limit=-1
+          tools: composer:v2, cs2pr, php-cs-fixer
+
+      - name: "install dependencies"
+        uses: "ramsey/composer-install@2.2.0"
+        with:
+          dependency-versions: "${{ matrix.dependencies }}"
+
+      - name: "php cs fixer dry run"
+        run: "php-cs-fixer fix --dry-run --format=checkstyle | cs2pr"
