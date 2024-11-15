@@ -35,9 +35,9 @@ class PhpStormReport extends Full
         parent::generateFileReport($report, $phpcsFile, $showSources, $width);
 
         if (\count($report['messages']) > 1) {
-            echo sprintf('✏️  phpstorm://open?file=%s', $phpcsFile->path).\PHP_EOL;
+            echo \sprintf('✏️  phpstorm://open?file=%s', $phpcsFile->path).\PHP_EOL;
         } else {
-            echo sprintf('✏️  phpstorm://open?file=%s&line=%d', $phpcsFile->path, key($report['messages'])).\PHP_EOL;
+            echo \sprintf('✏️  phpstorm://open?file=%s&line=%d', $phpcsFile->path, key($report['messages'])).\PHP_EOL;
         }
 
         return true;
