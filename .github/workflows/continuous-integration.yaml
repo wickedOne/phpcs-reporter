@@ -36,7 +36,7 @@ jobs:
           tools: composer:v2, cs2pr, php-cs-fixer
 
       - name: "install dependencies"
-        uses: "ramsey/composer-install@3.2.0"
+        uses: "ramsey/composer-install@3.2.1"
         with:
           dependency-versions: "${{ matrix.dependencies }}"
 
