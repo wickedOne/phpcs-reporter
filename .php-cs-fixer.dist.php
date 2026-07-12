@@ -28,6 +28,7 @@ return (new PhpCsFixer\Config())
         'strict_comparison' => true,
         'strict_param' => true,
         'fopen_flags' => array('b_mode' => true),
+        'declare_strict_types' => true,
     ))
     ->setFinder(
         (new PhpCsFixer\Finder())
